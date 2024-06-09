@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-flask
+  labels:
+    app: hello-flask
+spec:
+  containers:
+  - name: flask-app
+    image: someone12dd/my_flask:3.0
+    ports:
+    - containerPort: 5000
