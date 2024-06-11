@@ -6,7 +6,7 @@ metadata:
     app: hello-flask
 spec:
   containers:
-  - name: flask-app
-    image: someone12dd/my_flask:3.0
+  - name: hello-flask #CHNAGED#
+    image: someone12dd/my_flask
     ports:
     - containerPort: 5000
