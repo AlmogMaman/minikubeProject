@@ -11,11 +11,12 @@ alias mi='minikube'
 kubectl config use-context minikube
 
 # Build and push Docker image
-docker build -t someone12dd/my_flask:4.0 .
-docker push someone12dd/my_flask:4.0
+docker build -t someone12dd/my_flask:latest .
+docker push someone12dd/my_flask:latest
 
 # Apply Pod and Service configurations for Flask application
 kubectl apply -f app.yml
+kubectl apply -f app-deployment.yml
 kubectl apply -f app-service.yml
 
 # Apply Prometheus configurations
